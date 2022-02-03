@@ -65,7 +65,7 @@ namespace ShutdownToolkit.Forms
             this.lblAcoes.Location = new System.Drawing.Point(12, 48);
             this.lblAcoes.Name = "lblAcoes";
             this.lblAcoes.Size = new System.Drawing.Size(37, 13);
-            this.lblAcoes.TabIndex = 6;
+            this.lblAcoes.TabIndex = 0;
             this.lblAcoes.Text = "Ações";
             // 
             // lblMinutes
@@ -75,7 +75,7 @@ namespace ShutdownToolkit.Forms
             this.lblMinutes.Location = new System.Drawing.Point(177, 97);
             this.lblMinutes.Name = "lblMinutes";
             this.lblMinutes.Size = new System.Drawing.Size(48, 13);
-            this.lblMinutes.TabIndex = 2;
+            this.lblMinutes.TabIndex = 6;
             this.lblMinutes.Text = "Minutos";
             // 
             // lblHours
@@ -85,7 +85,7 @@ namespace ShutdownToolkit.Forms
             this.lblHours.Location = new System.Drawing.Point(177, 48);
             this.lblHours.Name = "lblHours";
             this.lblHours.Size = new System.Drawing.Size(37, 13);
-            this.lblHours.TabIndex = 1;
+            this.lblHours.TabIndex = 4;
             this.lblHours.Text = "Horas";
             // 
             // lblSeconds
@@ -95,7 +95,7 @@ namespace ShutdownToolkit.Forms
             this.lblSeconds.Location = new System.Drawing.Point(177, 151);
             this.lblSeconds.Name = "lblSeconds";
             this.lblSeconds.Size = new System.Drawing.Size(57, 13);
-            this.lblSeconds.TabIndex = 3;
+            this.lblSeconds.TabIndex = 8;
             this.lblSeconds.Text = "Segundos";
             // 
             // lblTimeLeft
@@ -106,7 +106,7 @@ namespace ShutdownToolkit.Forms
             this.lblTimeLeft.Location = new System.Drawing.Point(10, 215);
             this.lblTimeLeft.Name = "lblTimeLeft";
             this.lblTimeLeft.Size = new System.Drawing.Size(80, 25);
-            this.lblTimeLeft.TabIndex = 13;
+            this.lblTimeLeft.TabIndex = 3;
             this.lblTimeLeft.Text = "00:00:00";
             // 
             // lblTime
@@ -116,7 +116,7 @@ namespace ShutdownToolkit.Forms
             this.lblTime.Location = new System.Drawing.Point(12, 202);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(42, 13);
-            this.lblTime.TabIndex = 12;
+            this.lblTime.TabIndex = 2;
             this.lblTime.Text = "Tempo";
             // 
             // tmrDelay
@@ -150,7 +150,7 @@ namespace ShutdownToolkit.Forms
             this.btnParar.Name = "btnParar";
             this.btnParar.RadiusSize = 7;
             this.btnParar.Size = new System.Drawing.Size(82, 34);
-            this.btnParar.TabIndex = 15;
+            this.btnParar.TabIndex = 11;
             this.btnParar.Text = "Parar";
             this.btnParar.UseVisualStyleBackColor = false;
             this.btnParar.Click += new System.EventHandler(this.btnParar_Click);
@@ -170,7 +170,7 @@ namespace ShutdownToolkit.Forms
             this.btnStart.Name = "btnStart";
             this.btnStart.RadiusSize = 7;
             this.btnStart.Size = new System.Drawing.Size(82, 34);
-            this.btnStart.TabIndex = 4;
+            this.btnStart.TabIndex = 10;
             this.btnStart.Text = "Iniciar";
             this.btnStart.UseVisualStyleBackColor = false;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
@@ -191,7 +191,7 @@ namespace ShutdownToolkit.Forms
             this.pnlAcoes.Name = "pnlAcoes";
             this.pnlAcoes.RadiusSize = 6;
             this.pnlAcoes.Size = new System.Drawing.Size(151, 130);
-            this.pnlAcoes.TabIndex = 0;
+            this.pnlAcoes.TabIndex = 1;
             // 
             // rbSleep
             // 
@@ -254,18 +254,18 @@ namespace ShutdownToolkit.Forms
             this.pnlSeconds.Name = "pnlSeconds";
             this.pnlSeconds.RadiusSize = 4;
             this.pnlSeconds.Size = new System.Drawing.Size(225, 26);
-            this.pnlSeconds.TabIndex = 4;
+            this.pnlSeconds.TabIndex = 9;
             // 
             // txtSeconds
             // 
             this.txtSeconds.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.txtSeconds.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSeconds.Font = new System.Drawing.Font("Segoe UI Semibold", 9.25F);
+            this.txtSeconds.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.txtSeconds.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(189)))));
-            this.txtSeconds.Location = new System.Drawing.Point(7, 4);
+            this.txtSeconds.Location = new System.Drawing.Point(7, 5);
             this.txtSeconds.MaxLength = 2;
             this.txtSeconds.Name = "txtSeconds";
-            this.txtSeconds.Size = new System.Drawing.Size(210, 17);
+            this.txtSeconds.Size = new System.Drawing.Size(210, 16);
             this.txtSeconds.TabIndex = 0;
             this.txtSeconds.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSeconds_KeyPress);
             // 
@@ -282,18 +282,18 @@ namespace ShutdownToolkit.Forms
             this.pnlMinutes.Name = "pnlMinutes";
             this.pnlMinutes.RadiusSize = 4;
             this.pnlMinutes.Size = new System.Drawing.Size(225, 26);
-            this.pnlMinutes.TabIndex = 3;
+            this.pnlMinutes.TabIndex = 7;
             // 
             // txtMinutes
             // 
             this.txtMinutes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.txtMinutes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMinutes.Font = new System.Drawing.Font("Segoe UI Semibold", 9.25F);
+            this.txtMinutes.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.txtMinutes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(189)))));
-            this.txtMinutes.Location = new System.Drawing.Point(7, 4);
+            this.txtMinutes.Location = new System.Drawing.Point(7, 5);
             this.txtMinutes.MaxLength = 2;
             this.txtMinutes.Name = "txtMinutes";
-            this.txtMinutes.Size = new System.Drawing.Size(210, 17);
+            this.txtMinutes.Size = new System.Drawing.Size(210, 16);
             this.txtMinutes.TabIndex = 0;
             this.txtMinutes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMinutes_KeyPress);
             // 
@@ -310,18 +310,18 @@ namespace ShutdownToolkit.Forms
             this.pnlHours.Name = "pnlHours";
             this.pnlHours.RadiusSize = 4;
             this.pnlHours.Size = new System.Drawing.Size(225, 26);
-            this.pnlHours.TabIndex = 2;
+            this.pnlHours.TabIndex = 5;
             // 
             // txtHours
             // 
             this.txtHours.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.txtHours.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtHours.Font = new System.Drawing.Font("Segoe UI Semibold", 9.25F);
+            this.txtHours.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.txtHours.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(189)))));
-            this.txtHours.Location = new System.Drawing.Point(7, 4);
+            this.txtHours.Location = new System.Drawing.Point(7, 5);
             this.txtHours.MaxLength = 2;
             this.txtHours.Name = "txtHours";
-            this.txtHours.Size = new System.Drawing.Size(210, 17);
+            this.txtHours.Size = new System.Drawing.Size(210, 16);
             this.txtHours.TabIndex = 0;
             this.txtHours.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHours_KeyPress);
             // 
