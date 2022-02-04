@@ -79,6 +79,13 @@ namespace ShutdownToolkit.Forms
             new About().ShowDialog();
         }
 
+        private void WriteLog(int log_type)
+        {
+            var service = new MainService();
+            service.WriteFormLog(log_type);
+        }
+
+
         #endregion
 
         #region ..:: Events ::..
@@ -97,6 +104,10 @@ namespace ShutdownToolkit.Forms
         private void btnParar_Click(object sender, EventArgs e) => StopSequece();
 
         private void picAbout_Click(object sender, EventArgs e) => ShowAbout();
+
+        private void frmMain_Load(object sender, EventArgs e) => WriteLog(log_type: 0);
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e) => WriteLog(log_type: 1);
 
         #endregion
     }

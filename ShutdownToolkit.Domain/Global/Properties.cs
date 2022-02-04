@@ -27,6 +27,12 @@ namespace ShutdownToolkit.Domain.Global
         [Description("My github profile.")]
         public static string GithubProfile { get { return "https://github.com/jslucas22"; } }
 
+        [Description("Main Directory.")]
+        public static string Directory { get { return $"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\\SHUTDOWN_TOOLKIT"; } }
+
+        [Description("File Path.")]
+        public static string FileName { get { return $"{Directory}\\LOG_{DateTime.Now:yy_MM_yyyy}.txt"; } }
+
         #endregion
 
         #region ..:: Windows Forms Components ::..

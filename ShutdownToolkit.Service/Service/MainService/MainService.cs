@@ -1,6 +1,7 @@
 ﻿using ShutdownToolkit.Domain.Enums;
 using ShutdownToolkit.Domain.Factory;
 using ShutdownToolkit.Domain.Global;
+using ShutdownToolkit.Service.Service.LogService;
 using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
@@ -19,6 +20,21 @@ namespace ShutdownToolkit.Service.Service.MainService
         public void JustNumbers(KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        /// <summary>
+        /// Write the log of the form event (start/close)
+        /// </summary>
+        /// <param name="type">The type of event of the forms</param>
+        public void WriteFormLog(int type)
+        {
+            switch (type)
+            {
+                case (int)FormLogActionsEnum.Initialized: Log.WriteLog("The system was Initialized."); break;
+                case (int)FormLogActionsEnum.Closed: Log.WriteLog("The system was Closed."); break;
+                default: Log.WriteLog("A wrong type was informed."); break;
+            }
+
         }
 
         public void SetRadioButtonValue(RadioButton radioButton)
@@ -84,8 +100,18 @@ namespace ShutdownToolkit.Service.Service.MainService
             {
                 timer.Stop();
 
-                PerformShutdown(radioButton: ref radioButton,
-                                action: action);
+                try
+                {
+                    Log.WriteLog($"Performming the action.");
+
+                    PerformShutdown(radioButton: ref radioButton,
+                                    action: action);
+                }
+                catch (Exception ex)
+                {
+                    Log.WriteLog($"Something went wrong: {ex.Message}");
+                }
+
             }
         }
 
@@ -101,6 +127,8 @@ namespace ShutdownToolkit.Service.Service.MainService
                              label: ref label,
                              radioButton: ref radioButton,
                              action: action);
+
+            Log.WriteLog("The sequence has been initialized.");
         }
 
         /// <summary>

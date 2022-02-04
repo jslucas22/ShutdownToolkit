@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\FormLogActionsEnum.cs" />
     <Compile Include="Global\Properties.cs" />
     <Compile Include="Enums\ShutdownActionEnum.cs" />
     <Compile Include="Enums\TextBoxEnum.cs" />
