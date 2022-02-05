@@ -31,7 +31,7 @@ namespace ShutdownToolkit.Domain.Global
         public static string Directory { get { return $"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\\SHUTDOWN_TOOLKIT"; } }
 
         [Description("File Path.")]
-        public static string FileName { get { return $"{Directory}\\LOG_{DateTime.Now:yy_MM_yyyy}.txt"; } }
+        public static string FileName { get { return $"{Directory}\\LOG_{DateTime.Now:dd_MM_yyyy}.txt"; } }
 
         #endregion
 
